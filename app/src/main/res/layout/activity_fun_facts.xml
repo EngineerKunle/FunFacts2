@@ -31,10 +31,12 @@
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Show Another Fun Fact"
         android:id="@+id/showFactButton"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:background="@android:color/white" />
+        android:background="@android:color/white"
+        android:clickable="true"
+        android:text="Show Another Fun Fact"
+        android:textColor="#ff51b46d" />
 
 </RelativeLayout>
