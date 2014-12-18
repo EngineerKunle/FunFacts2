@@ -1,7 +1,6 @@
 package com.example.admin.funfacts;
 
 import android.app.Activity;
-import android.nfc.Tag;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
