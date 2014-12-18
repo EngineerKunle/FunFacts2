@@ -1,7 +1,9 @@
 package com.example.admin.funfacts;
 
 import android.app.Activity;
+import android.nfc.Tag;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.RelativeLayout;
@@ -10,6 +12,8 @@ import android.widget.Toast;
 
 
 public class FunFactsActivity extends Activity {
+
+    public static final String TAG= FunFactsActivity.class.getSimpleName();
 
     private Factbook mFactBook = new Factbook();
     private ColorWheel mColorWheel = new ColorWheel();
@@ -34,12 +38,16 @@ public class FunFactsActivity extends Activity {
                 int color = mColorWheel.getColor();
                relativeLayout.setBackgroundColor(color);
                 showFactButton.setTextColor(color);
+                Toast.makeText(FunFactsActivity.this, "keep clicking", Toast.LENGTH_SHORT).show();
+
             }
         };
         showFactButton.setOnClickListener(listener);
 
 
-      Toast.makeText(this, "Yay! Our Activity was created", Toast.LENGTH_LONG).show();
+      //Toast.makeText(this, "Yay! Our Activity was created", Toast.LENGTH_LONG).show();
+
+        Log.d(TAG, "We are logging from the onCreate() method");
 
     }
 
