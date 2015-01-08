@@ -1,6 +1,7 @@
 package com.example.admin.funfacts;
 
 import android.app.Activity;
+import android.content.res.Resources;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -9,13 +10,18 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.util.Random;
+
 
 public class FunFactsActivity extends Activity {
 
     public static final String TAG= FunFactsActivity.class.getSimpleName();
 
-    private Factbook mFactBook = new Factbook();
+   // private Factbook mFactBook = new Factbook();
     private ColorWheel mColorWheel = new ColorWheel();
+    private String[] myString;
+    private static final Random rgenerator = new Random();
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,9 +36,12 @@ public class FunFactsActivity extends Activity {
         View.OnClickListener listener = new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String fact = mFactBook.getFact();
-                // Update the label with our dynamic fact
-                factLabel.setText(fact);
+                Resources res = getResources();
+
+                myString = res.getStringArray(R.array.android_names);
+
+                String arrayres = myString[rgenerator.nextInt(myString.length)];
+                factLabel.setText(arrayres);
 
                 int color = mColorWheel.getColor();
                relativeLayout.setBackgroundColor(color);

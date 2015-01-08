@@ -4,5 +4,18 @@
     <string name="app_name">Fun Facts</string>
     <string name="hello_world">Did you know?</string>
     <string name="action_settings">Settings</string>
+    <string-array name="android_names">
+        <item>Ants stretch when they wake up in the morning.</item>
+        <item>Can kunle do it</item>
+        <item>My first app</item>
+        <item>yes he can</item>
+        <item>You are born with 300 bones; by the time you are an adult you will have 206.</item>
+        <item>It takes about 8 minutes for light from the Sun to reach Earth.</item>
+        <item>Some bamboo plants can grow almost a meter in just one day.</item>
+        <item>Kunle soon learn Javascript</item>
+        <item>Some penguins can leap 2-3 meters out of the water.</item>
+        <item>kunle best android developer</item>
+        <item>Kunle rules.</item>
+    </string-array>
 
 </resources>
